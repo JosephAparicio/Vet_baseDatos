@@ -1,0 +1,134 @@
+INSERT INTO proveedor VALUES('PR001', 'Distribuidora Mascotera', '111111111', 'Calle Principal #123');
+INSERT INTO proveedor VALUES('PR002', 'Productos para Mascotas S.A.', '222222222', 'Avenida Central #456');
+INSERT INTO proveedor VALUES ('PR003', 'Mundo Animal Ltda.', '333333333', 'Calle Secundaria #789');
+
+INSERT INTO producto VALUES('P001', 'Croquetas Premium', 'PR001', 20.5, 'Marca A', 'Alimento balanceado para mascotas');
+INSERT INTO producto VALUES('P002', 'Arena para Gatos', 'PR002', 15.0, 'Marca B', 'Absorbente y sin polvo');
+INSERT INTO producto VALUES('P003', 'Juguetes para Perros', 'PR003', 10.75, 'Marca C', 'Set de juguetes variados');
+INSERT INTO producto VALUES('P004', 'Shampoo para Mascotas', 'PR001', 8.99, 'Marca A', 'Fórmula suave y sin lágrimas');
+INSERT INTO producto VALUES('P005', 'Comida Húmeda para Gatos', 'PR002', 12.25, 'Marca B', 'Sabores variados');
+INSERT INTO producto VALUES('P006', 'Collar para Perros', 'PR003', 5.5, 'Marca C', 'Ajustable y resistente');
+INSERT INTO producto VALUES('P007', 'Correa Retráctil para Perros', 'PR001', 15.75, 'Marca A', 'Longitud ajustable');
+INSERT INTO producto VALUES('P008', 'Cama para Gatos', 'PR002', 18.0, 'Marca B', 'Suave y cómoda');
+INSERT INTO producto VALUES('P009', 'Snacks para Perros', 'PR003', 7.8, 'Marca C', 'Variedad de sabores');
+INSERT INTO producto VALUES('P010', 'Arenero para Gatos', 'PR001', 22.0, 'Marca A', 'Fácil de limpiar');
+
+INSERT INTO inventario VALUES('INV001', 'P001', 150, 200, 50);
+INSERT INTO inventario VALUES('INV002', 'P002', 120, 180, 40);
+INSERT INTO inventario VALUES('INV003', 'P003', 90, 150, 30);
+INSERT INTO inventario VALUES('INV004', 'P004', 110, 160, 40);
+INSERT INTO inventario VALUES('INV005', 'P005', 80, 120, 30);
+INSERT INTO inventario VALUES('INV006', 'P006', 100, 140, 30);
+INSERT INTO inventario VALUES('INV007', 'P007', 130, 190, 50);
+INSERT INTO inventario VALUES('INV008', 'P008', 95, 140, 30);
+INSERT INTO inventario VALUES('INV009', 'P009', 70, 120, 20);
+INSERT INTO inventario VALUES('INV010', 'P010', 105, 150, 40);
+
+INSERT INTO abastecimiento VALUES('AB001', TO_DATE('2023-01-15', 'YYYY-MM-DD'), 'PR001', 100, 'P001');
+INSERT INTO abastecimiento VALUES('AB002', TO_DATE('2023-02-20', 'YYYY-MM-DD'), 'PR002', 150, 'P002');
+INSERT INTO abastecimiento VALUES('AB003', TO_DATE('2023-03-25', 'YYYY-MM-DD'), 'PR003', 80, 'P003');
+INSERT INTO abastecimiento VALUES('AB004', TO_DATE('2023-04-10', 'YYYY-MM-DD'), 'PR001', 120, 'P004');
+INSERT INTO abastecimiento VALUES('AB005', TO_DATE('2023-05-05', 'YYYY-MM-DD'), 'PR002', 90, 'P005');
+INSERT INTO abastecimiento VALUES('AB006', TO_DATE('2023-06-12', 'YYYY-MM-DD'), 'PR003', 110, 'P006');
+INSERT INTO abastecimiento VALUES('AB007', TO_DATE('2023-07-18', 'YYYY-MM-DD'), 'PR001', 130, 'P007');
+INSERT INTO abastecimiento VALUES('AB008', TO_DATE('2023-08-22', 'YYYY-MM-DD'), 'PR002', 95, 'P008');
+INSERT INTO abastecimiento VALUES('AB009', TO_DATE('2023-09-30', 'YYYY-MM-DD'), 'PR003', 70, 'P009');
+INSERT INTO abastecimiento VALUES('AB010', TO_DATE('2023-10-08', 'YYYY-MM-DD'), 'PR001', 105, 'P010');
+
+INSERT INTO empleado VALUES(1, 'Luis Martínez', 'Repartidor', '12345678');
+INSERT INTO empleado VALUES(2, 'Ana García', 'Veterinario', '87654321');
+INSERT INTO empleado VALUES(3, 'Miguel Sánchez', 'Cajero', '13579246');
+
+INSERT INTO venta VALUES('V001', 1, TO_DATE('2023-01-25', 'YYYY-MM-DD'), TO_DATE('14:30', 'HH24:MI'), 'C', 'C', 'P001', 2, 41.0, 1);
+INSERT INTO venta VALUES('V002', 2, TO_DATE('2023-02-28', 'YYYY-MM-DD'), TO_DATE('16:45', 'HH24:MI'), 'E', 'C', 'P002', 1, 15.0, 2);
+INSERT INTO venta VALUES('V003', 3, TO_DATE('2023-03-10', 'YYYY-MM-DD'), TO_DATE('11:00', 'HH24:MI'), 'C', 'C', 'P003', 3, 32.25, 3);
+INSERT INTO venta VALUES('V004', 4, TO_DATE('2023-04-15', 'YYYY-MM-DD'), TO_DATE('18:30', 'HH24:MI'), 'E', 'C', 'P004', 1, 8.99, 1);
+INSERT INTO venta VALUES('V005', 5, TO_DATE('2023-05-20', 'YYYY-MM-DD'), TO_DATE('14:50', 'HH24:MI'), 'C', 'C', 'P005', 2, 24.5, 2);
+INSERT INTO venta VALUES('V006', 6, TO_DATE('2023-06-25', 'YYYY-MM-DD'), TO_DATE('17:00', 'HH24:MI'), 'E', 'C', 'P006', 1, 5.5, 3);
+INSERT INTO venta VALUES('V007', 7, TO_DATE('2023-07-30', 'YYYY-MM-DD'), TO_DATE('12:15', 'HH24:MI'), 'C', 'C', 'P007', 2, 31.5, 1);
+INSERT INTO venta VALUES('V008', 8, TO_DATE('2023-08-05', 'YYYY-MM-DD'), TO_DATE('17:30', 'HH24:MI'), 'E', 'C', 'P008', 1, 18.0, 2);
+INSERT INTO venta VALUES('V009', 9, TO_DATE('2023-09-10', 'YYYY-MM-DD'), TO_DATE('13:45', 'HH24:MI'), 'C', 'C', 'P009', 3, 23.4, 3);
+INSERT INTO venta VALUES('V010', 10, TO_DATE('2023-10-15', 'YYYY-MM-DD'), TO_DATE('15:55', 'HH24:MI'), 'E', 'C', 'P010', 2, 33.0, 1);
+
+INSERT INTO venta_inventario VALUES('INV001', 'V001');
+INSERT INTO venta_inventario VALUES('INV002', 'V002');
+INSERT INTO venta_inventario VALUES('INV003', 'V003');
+INSERT INTO venta_inventario VALUES('INV004', 'V004');
+INSERT INTO venta_inventario VALUES('INV005', 'V005');
+INSERT INTO venta_inventario VALUES('INV006', 'V006');
+INSERT INTO venta_inventario VALUES('INV007', 'V007');
+INSERT INTO venta_inventario VALUES('INV008', 'V008');
+INSERT INTO venta_inventario VALUES('INV009', 'V009');
+INSERT INTO venta_inventario VALUES('INV010', 'V010');
+
+INSERT INTO especie VALUES(1, 'Perro');
+INSERT INTO especie VALUES(2, 'Gato');
+INSERT INTO especie VALUES(3, 'Loro');
+
+INSERT INTO comportamiento VALUES(1, 'Amigable');
+INSERT INTO comportamiento VALUES(2, 'Agresivo');
+INSERT INTO comportamiento VALUES(3, 'Pasivo');
+
+INSERT INTO raza VALUES(1, 'Poodle', 1);
+INSERT INTO raza VALUES(2, 'Labrador Retriever', 1);
+INSERT INTO raza VALUES(3, 'Siames', 2);
+INSERT INTO raza VALUES(4, 'Persa', 2);
+INSERT INTO raza VALUES(5, 'Canario', 3);
+INSERT INTO raza VALUES(6, 'Periquito', 3);
+INSERT INTO raza VALUES(7, 'Pastor Alemán', 1);
+INSERT INTO raza VALUES(8, 'Bulldog Francés', 1);
+INSERT INTO raza VALUES(9, 'Siamés Moderno', 2);
+INSERT INTO raza VALUES(10, 'Ragdoll', 2);
+
+INSERT INTO cliente VALUES(1, 'Juan', 'González', 'Pérez', 'juan@example.com', '123456789', '987654321', '987654322', TO_DATE('1990-05-20', 'YYYY-MM-DD'), 2, 'A');
+INSERT INTO cliente VALUES(2, 'María', 'López', 'Martínez', 'maria@example.com', '987654321', '654321987', null, TO_DATE('1985-12-15', 'YYYY-MM-DD'), 1, 'A');
+INSERT INTO cliente VALUES(3, 'Carlos', 'Sánchez', 'García', 'carlos@example.com', '555555555', '111111111', null, TO_DATE('2000-08-10', 'YYYY-MM-DD'), 0, 'A');
+INSERT INTO cliente VALUES(4, 'Ana', 'Martínez', 'Fernández', 'ana@example.com', '777777777', '333333333', '444444444', TO_DATE('1988-03-03', 'YYYY-MM-DD'), 3, 'A');
+INSERT INTO cliente VALUES(5, 'Pedro', 'Ramírez', 'Ruiz', 'pedro@example.com', '111111111', '222222222', null, TO_DATE('1995-09-28', 'YYYY-MM-DD'), 1, 'A');
+INSERT INTO cliente VALUES(6, 'Laura', 'Díaz', 'López', 'laura@example.com', '999999999', '888888888', '666666666', TO_DATE('1998-11-12', 'YYYY-MM-DD'), 2, 'A');
+INSERT INTO cliente VALUES(7, 'Sergio', 'Pérez', 'Gómez', 'sergio@example.com', '444444444', '555555555', '333333333', TO_DATE('1987-07-07', 'YYYY-MM-DD'), 2, 'A');
+INSERT INTO cliente VALUES(8, 'Isabel', 'Fernández', 'Gutiérrez', 'isabel@example.com', '666666666', '777777777', '222222222', TO_DATE('1992-04-18', 'YYYY-MM-DD'), 0, 'A');
+INSERT INTO cliente VALUES(9, 'Jorge', 'Gómez', 'Hernández', 'jorge@example.com', '888888888', '999999999', null, TO_DATE('1994-06-25', 'YYYY-MM-DD'), 1, 'A');
+INSERT INTO cliente VALUES(10, 'Carmen', 'Hernández', 'Jiménez', 'carmen@example.com', '333333333', '111111111', null, TO_DATE('1980-09-05', 'YYYY-MM-DD'), 3, 'A');
+
+INSERT INTO entrega VALUES ('E001', 1, TO_DATE('2023-01-20', 'YYYY-MM-DD'), TO_DATE('12:30', 'HH24:MI'), 5, 'Calle A #123', 'Frente al parque', 'E', 3.5, 50.0, 'C', 'V001', 1);
+INSERT INTO entrega VALUES('E002', 2, TO_DATE('2023-02-25', 'YYYY-MM-DD'), TO_DATE('15:45', 'HH24:MI'), 3, 'Avenida B #456', 'Esquina con la tienda', 'E', 2.0, 30.0, 'E', 'V002', 2);
+INSERT INTO entrega VALUES('E003', 3, TO_DATE('2023-03-30', 'YYYY-MM-DD'), TO_DATE('10:15', 'HH24:MI'), 4, 'Calle C #789', 'Frente a la escuela', 'P', 0, 20.0, 'E', 'V003', 3);
+INSERT INTO entrega VALUES('E004', 1, TO_DATE('2023-04-10', 'YYYY-MM-DD'), TO_DATE('18:00', 'HH24:MI'), 6, 'Avenida D #101', 'Junto al hospital', 'E', 4.0, 60.0, 'C', 'V004', 4);
+INSERT INTO entrega VALUES('E005', 2, TO_DATE('2023-05-15', 'YYYY-MM-DD'), TO_DATE('14:20', 'HH24:MI'), 2, 'Calle E #202', 'Al lado de la gasolinera', 'E', 1.5, 25.0, 'E', 'V005', 5);
+INSERT INTO entrega VALUES('E006', 3, TO_DATE('2023-06-20', 'YYYY-MM-DD'), TO_DATE('16:30', 'HH24:MI'), 7, 'Avenida F #303', 'Frente al cine', 'P', 0, 35.0, 'C', 'V006', 6);
+INSERT INTO entrega VALUES('E007', 1, TO_DATE('2023-07-25', 'YYYY-MM-DD'), TO_DATE('11:45', 'HH24:MI'), 3, 'Calle G #404', 'Detrás del mercado', 'E', 2.0, 30.0, 'E', 'V007', 7);
+INSERT INTO entrega VALUES('E008', 2, TO_DATE('2023-08-30', 'YYYY-MM-DD'), TO_DATE('17:10', 'HH24:MI'), 5, 'Avenida H #505', 'Cerca del parque', 'E', 3.5, 50.0, 'C', 'V008', 8);
+INSERT INTO entrega VALUES('E009', 3, TO_DATE('2023-09-05', 'YYYY-MM-DD'), TO_DATE('13:00', 'HH24:MI'), 4, 'Calle I #606', 'Junto a la panadería', 'P', 0, 20.0, 'E', 'V009', 9);
+INSERT INTO entrega VALUES('E010', 1, TO_DATE('2023-10-10', 'YYYY-MM-DD'), TO_DATE('15:20', 'HH24:MI'), 6, 'Avenida J #707', 'Frente a la farmacia', 'E', 4.0, 60.0, 'C', 'V010', 10);
+
+
+INSERT INTO mascota VALUES(1, 'Toby', 1, TO_DATE('2019-03-10', 'YYYY-MM-DD'), 1, 1, 2, 'Poodle cariñoso y juguetón');
+INSERT INTO mascota VALUES(2, 'Luna', 2, TO_DATE('2020-05-15', 'YYYY-MM-DD'), 2, 3, 1, 'Gata tranquila y curiosa');
+INSERT INTO mascota VALUES(3, 'Rocky', 3, TO_DATE('2018-08-20', 'YYYY-MM-DD'), 1, 2, 3, 'Perro activo y leal');
+INSERT INTO mascota VALUES(4, 'Bella', 4, TO_DATE('2022-01-05', 'YYYY-MM-DD'), 3, 1, 2, 'Cachorra juguetona');
+INSERT INTO mascota VALUES(5, 'Max', 5, TO_DATE('2021-07-08', 'YYYY-MM-DD'), 2, 2, 1, 'Gato independiente');
+INSERT INTO mascota VALUES(6, 'Coco', 6, TO_DATE('2020-11-12', 'YYYY-MM-DD'), 1, 3, 3, 'Labrador cariñoso');
+INSERT INTO mascota VALUES(7, 'Milo', 7, TO_DATE('2019-04-25', 'YYYY-MM-DD'), 3, 2, 1, 'Perro enérgico y juguetón');
+INSERT INTO mascota VALUES(8, 'Sophie', 8, TO_DATE('2018-09-18', 'YYYY-MM-DD'), 2, 1, 2, 'Gata cariñosa y sociable');
+INSERT INTO mascota VALUES(9, 'Simba', 9, TO_DATE('2020-02-28', 'YYYY-MM-DD'), 1, 3, 3, 'León animado en casa');
+INSERT INTO mascota VALUES(10, 'Lola', 10, TO_DATE('2017-06-15', 'YYYY-MM-DD'), 2, 2, 1, 'Gata traviesa y curiosa');
+
+INSERT INTO servicio_mascota VALUES(1, TO_DATE('2023-01-25', 'YYYY-MM-DD'), 'A', 1, 'Consulta de rutina', 2, 'V001',1);
+INSERT INTO servicio_mascota VALUES(2, TO_DATE('2023-02-28', 'YYYY-MM-DD'), 'A', 2, 'Vacunación anual', 3, 'V002',1);
+INSERT INTO servicio_mascota VALUES(3, TO_DATE('2023-03-10', 'YYYY-MM-DD'), 'A', 3, 'Corte de pelo', 1, 'V003',4);
+INSERT INTO servicio_mascota VALUES(4, TO_DATE('2023-04-15', 'YYYY-MM-DD'), 'I', 4, 'Desparasitación', 2, 'V004',1);
+INSERT INTO servicio_mascota VALUES(5, TO_DATE('2023-05-20', 'YYYY-MM-DD'), 'A', 5, 'Consulta por enfermedad', 3, 'V005',1);
+INSERT INTO servicio_mascota VALUES(6, TO_DATE('2023-06-25', 'YYYY-MM-DD'), 'I', 6, 'Baño y cepillado', 1, 'V006',2);
+INSERT INTO servicio_mascota VALUES(7, TO_DATE('2023-07-30', 'YYYY-MM-DD'), 'A', 7, 'Baño medicado', 2, 'V007', 3);
+INSERT INTO servicio_mascota VALUES(8, TO_DATE('2023-08-05', 'YYYY-MM-DD'), 'A', 8, 'Vacunación anual', 3, 'V008',1);
+INSERT INTO servicio_mascota VALUES(9, TO_DATE('2023-09-10', 'YYYY-MM-DD'), 'I', 9, 'Corte de pelo', 1, 'V009', 4);
+INSERT INTO servicio_mascota VALUES(10, TO_DATE('2023-10-15', 'YYYY-MM-DD'), 'A', 10, 'Desparasitación', 2, 'V010',1);
+
+INSERT INTO tipo_servicio VALUES (1, 'Consulta medica');
+INSERT INTO tipo_servicio VALUES (2, 'Baño regular');
+INSERT INTO tipo_servicio VALUES (3, 'Baño medicado');
+INSERT INTO tipo_servicio VALUES (4, 'Peluquería');
+
+
+
